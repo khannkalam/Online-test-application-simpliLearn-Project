@@ -1,0 +1,26 @@
+<div class="container-fluid  py-5">
+    <h1     class="display=5 fw-bold"> WELCOME TO ONLINE TEST APPLICATION</h1>
+    <p class="col-md-8 fs-4">this quiz contains total 9 questions. Each contains 10 marks each</p>
+    <h4 class="bg-light">rules:</h4>
+    <ol>
+    <li class="bg-light">correct answer will give you 10 marks</li>
+    <li class="bg-light">Incorrect answer will give you -10 marks</li>
+    <li class="bg-light">You will have 60 sec for each question</li>
+    <li class="bg-light">Refreshing the page will reset the test</li>   
+    </ol>
+    <h1 style="text-align:center">ALL THE BEST!!</h1>
+ 
+  <div class="name col-md-4 my-3">
+ <label for="">Enter your name</label>
+ <input #name type="text" class="form-control">
+</div>
+  <div class="name col-md-4 my-3">
+ <label for="">Enter student ID</label>
+ <input #studentid type="text" class="form-control">
+</div>
+  <div class="name col-md-4 my-3">
+ <label for="">Enter your date of birth</label>
+ <input #DOB type="date" class="form-control">
+</div>
+<button class="btn btn-dark btn-lg" routerLink="/test" (click)="starttest()">Start the test</button>
+</div>

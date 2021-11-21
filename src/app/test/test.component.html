@@ -1,0 +1,65 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="assets/test1logo.png" alt="image">
+
+            </div>
+            <div class="test-header">
+             <h2>Angular & TypeScript Test</h2>
+             <span class="welcome"> welcome : {{name}}</span>
+            </div>
+        </div>
+        
+        <ng-container *ngIf="!istestcompleted">
+            <div class="d-flex justify-content-around py-3">
+                <div class="score">
+                    <h5> {{points}} points</h5>
+                </div>
+                    <div class="questions-remaining">
+                        <h5> Question {{currentQuestion+1}} of {{questionList.length}} </h5>
+                    </div>
+                    <div class="timer" >
+                      <h5>{{counter}} sec 🕒 </h5> 
+                    </div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="question">
+                      <div class="card">         
+                          <h3> {{questionList[currentQuestion]?.questionText}} </h3>
+                        </div>
+                    </div>    
+                        <div class="options">
+                      <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                          <li (click)="anwser(currentQuestion+1,option)">
+                              <div appChangeBg [iscorrect]="option.correct" class="card">
+                                    {{option.text}}
+                              </div>
+                          </li>
+                      </ol>
+    
+                  </div>
+                  <div class="d-flex justify-content-between">
+                   <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i class="fa fa-chevron-right fa-3x text-primary" aria-hidden="true"></i></button>
+                   <button class="btn" (click)=" resettest()"> <i class="fa fa-refresh" aria-hidden="true"></i> </button>
+                   <button [disabled]="currentQuestion===8" class="btn" (click)="nextQuestion()"><i class="fa fa-chevron-right fa-3x text-primary" aria-hidden="true"></i></button>
+                  </div>
+        </ng-container>
+
+        <ng-container *ngIf="istestcompleted">
+            <div class="row d-flex justify-content-between">
+              <img class="image5" style="" src="/assets/congo.jpg" alt="image">
+                <div class="result text-center col-md-6 col-sm-12">
+                    <h2>congratualtions!! <br>you have completed this test. <br>Below is your Result:</h2>
+                    <p>Total questions attempted : {{questionList.length}}</p>
+                    <p>Total correct anwser : {{correctAnwser}}</p>
+                    <p>total incorrect anwser {{IncorrectAnwser}} </p>
+                    <p>Your score: {{points}} points </p>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

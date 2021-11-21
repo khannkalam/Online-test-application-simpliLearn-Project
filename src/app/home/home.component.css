@@ -1,0 +1,13 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+input.form-control{
+    margin-right: 1000px;
+}
+
+.btn{
+    margin-top: 40px;
+    margin-left: 200px;
+}
+

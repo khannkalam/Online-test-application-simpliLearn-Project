@@ -1,0 +1,17 @@
+ 
+
+
+  						                    Online Test Application
+
+ 		My test application is 2 page application. 1st page is home page which has a navbar which has a company logo and its name
+		after that there are intructions and rules for the test. afrer that there are 3 text area where you can fill your name
+		student Id and your date of birth after that there are submit button which will save your data and take you to the next page.
+
+		then there is second page which have same navigation bar component and after that there are test component. in the top there 	
+		are your test topic and your name which you filled in the previous page. then there are 3 cards which shows your points,
+ 		your current question number and timer then after that there is question and and answer options and in the bottom there are 3 icons 
+		which are working left icon will take you to the previous question, the right icon will take you to the next question and the middle
+		icon is for reset and it will reset your test and everything will start again. 
+			
+		there are total 9 questions every question carry 10 points after finishing your test it will autmotically take you to the result 
+		component there you can see how many questions you have attempted, number of correct answers given, number of incorrect answers given and your total points.   
